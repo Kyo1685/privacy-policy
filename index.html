@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Frame-Options" content="allow-from https://kyosuke12378.web.app">
+    <title>ကျွဲဂိမ်း - Official</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: #2563eb;
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"><path fill="white" fill-opacity="1" d="M0,70L1440,10L1440,100L0,100Z"></path></svg>');
+            background-size: cover;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .header p {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin: 30px 0 15px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 17px;
+            min-width: 200px;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .telegram-btn {
+            background: #0088cc;
+            color: white;
+        }
+        
+        .viber-btn {
+            background: #7b519d;
+            color: white;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .contact-btn i {
+            font-size: 20px;
+        }
+        
+        .content {
+            padding: 50px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section h2 {
+            color: #2563eb;
+            margin-bottom: 18px;
+            font-size: 24px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eef2f7;
+            position: relative;
+        }
+        
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: #2563eb;
+        }
+        
+        .section p {
+            margin-bottom: 20px;
+            font-size: 17px;
+            color: #4b5563;
+            line-height: 1.7;
+        }
+        
+        .highlight {
+            background: #eff6ff;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #2563eb;
+            margin: 25px 0;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .contact-item {
+            flex: 1;
+            min-width: 200px;
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s;
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-item i {
+            font-size: 24px;
+            color: #2563eb;
+            margin-bottom: 15px;
+        }
+        
+        .contact-item h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #1e293b;
+        }
+        
+        .update {
+            text-align: center;
+            padding: 25px;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                padding: 35px 25px;
+            }
+            
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 18px;
+            }
+            
+            .contact-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .header {
+                padding: 35px 20px;
+            }
+            
+            .header h1 {
+                font-size: 28px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .section h2 {
+                font-size: 22px;
+            }
+            
+            .header h1 {
+                font-size: 24px;
+            }
+            
+            .header p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Privacy Policy</h1>
+            <p>ကျွှဲဂိမ်း - Entertainment for Everyone</p>
+            
+           <div class="contact-buttons">
+    <!-- Telegram -->
+    <a href="#" 
+       class="contact-btn telegram-btn" 
+       id="telegram-btn"
+       onclick="handleTelegramClick(event)">
+       <i class="fab fa-telegram"></i>
+       <span>Contact on Telegram</span>
+    </a>
+
+    <!-- Viber -->
+    <a href="#" 
+       class="contact-btn viber-btn" 
+       id="telegram-btn"
+       onclick="handleViberClick(event)">
+       <i class="fab fa-viber"></i>
+       <span>Contact on Viber</span>
+    </a>
+</div>
+        </div>
+        
+        <div class="content">
+            <!-- Rest of your privacy policy content remains the same -->
+            <div class="section">
+                <h2>Privacy Policy</h2>
+                <p>ကျွှဲဂိမ်း is provided as a free app intended for entertainment purposes. This Privacy Policy is meant to inform users about our policies regarding the collection, use, and disclosure of personal information for anyone choosing to use our app.</p>
+                <p class="highlight">By installing and using ကျွှဲဂိမ်း, you agree to the terms described in this policy.</p>
+            </div>
+            
+            <div class="section">
+                <h2>1. Information Collection and Use</h2>
+                <p>We value your privacy. ကျွဲဂိမ်း is designed to be used without requiring you to provide personal data. Specifically:</p>
+                <p>• We do not ask for your name, email address, phone number, or any other personally identifiable information.</p>
+                <p>• We do not require you to create an account or sign in.</p>
+                <p>• We do not collect or store any sensitive information from your device.</p>
+                <p>• The app's functionality is limited to providing an offline, casual gaming experience.</p>
+            </div>
+            
+            <div class="section">
+                <h2>2. Automatically Collected Information</h2>
+                <p>ကျွဲဂိမ်း does not use built-in analytics tools or third-party services to collect data such as:</p>
+                <p>• Device identifiers (e.g., Advertising ID)</p>
+                <p>• IP addresses</p>
+                <p>• Usage data or diagnostics</p>
+                <p>As a result, we do not track user behavior within the app.</p>
+            </div>
+            
+            <div class="section">
+                <h2>3. External Links</h2>
+                <p>The app may include buttons or links that lead to external resources, including:</p>
+                <p>• A website where you can read this Privacy Policy</p>
+                <p>• Social media or messaging platforms (e.g., Telegram, Viber)</p>
+                <p>Please be aware that we do not operate or control these external websites or services. We strongly encourage you to review the privacy policies of any external site you visit. We assume no responsibility for the content, policies, or practices of third-party sites or services.</p>
+            </div>
+            
+            <div class="section">
+                <h2>4. Advertising and Analytics</h2>
+                <p>At this time, ကျွဲဂိမ်း does not display third-party advertisements or use analytics services. Should this change in future versions of the app, we will update this Privacy Policy to clearly explain what data is collected, how it's used, and what choices users have.</p>
+            </div>
+            
+            <div class="section">
+                <h2>5. Data Security</h2>
+                <p>Even though we do not collect personal information, we take the security of our users seriously. We recommend users:</p>
+                <p>• Only download the app from trusted sources (such as Google Play)</p>
+                <p>• Avoid sharing device data with unknown parties</p>
+            </div>
+            
+            <div class="section">
+                <h2>6. Changes to This Privacy Policy</h2>
+                <p>We may update this Privacy Policy from time to time to reflect:</p>
+                <p>• Changes in our practices</p>
+                <p>• Compliance with new laws or regulations</p>
+                <p>• Addition of new features or services</p>
+                <p>Whenever we make changes, the updated Privacy Policy will be posted on this page. We encourage users to review this page periodically.</p>
+            </div>
+            
+            <div class="section">
+                <h2>7. Contact Us</h2>
+                <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our practices, please contact us:</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>[018ky0suke@gmail.com]</p>
+                    </div>
+                </div>
+                
+                <p>We are committed to responding to user inquiries as quickly as possible.</p>
+            </div>
+            
+            <div class="update">
+                <p>Last updated: August 14, 2024</p>
+            </div>
+        </div>
+    </div>
+<script>
+    // Function to handle Telegram click
+    function handleTelegramClick(event) {
+        event.preventDefault();
+        
+        // Try to open Telegram app directly
+        const appUrl = 'tg://resolve?domain=BuffaloOff';
+        const webUrl = 'https://t.me/BuffaloOff';
+        
+        // Check if we're in an iframe
+        if (window.self !== window.top) {
+            // We're in an iframe, send message to parent
+            window.parent.postMessage({
+                type: "OPEN_EXTERNAL_LINK",
+                url: appUrl,
+                fallback: webUrl
+            }, "*");
+        } else {
+            // We're not in an iframe, handle directly
+            window.location.href = appUrl;
+            
+            // Fallback to web after a short delay if the app doesn't open
+            setTimeout(function() {
+                if (!document.hidden) {
+                    window.location.href = webUrl;
+                }
+            }, 500);
+        }
+    }
+    
+    // Function to handle Viber click
+    function handleViberClick(event) {
+        event.preventDefault();
+        
+        // Working Viber contact link
+        const appUrl = 'viber://chat?number=%2B95750898761';
+        const webUrl = 'https://viber.com';
+        
+        // Check if we're in an iframe
+        if (window.self !== window.top) {
+            // We're in an iframe, send message to parent
+            window.parent.postMessage({
+                type: "OPEN_EXTERNAL_LINK",
+                url: appUrl,
+                fallback: webUrl
+            }, "*");
+        } else {
+            // We're not in an iframe, handle directly
+            window.location.href = appUrl;
+            
+            // Fallback to web after a short delay if the app doesn't open
+            setTimeout(function() {
+                if (!document.hidden) {
+                    window.location.href = webUrl;
+                }
+            }, 500);
+        }
+    }
+    
+    // Set up event listeners when DOM is loaded
+    document.addEventListener("DOMContentLoaded", function() {
+        const telegramBtn = document.getElementById("telegram-btn");
+        const viberBtn = document.getElementById("viber-btn");
+        
+        if (telegramBtn) {
+            telegramBtn.addEventListener("click", handleTelegramClick);
+        }
+        
+        if (viberBtn) {
+            viberBtn.addEventListener("click", handleViberClick);
+        }
+        
+        // Listen for messages from parent if we're in an iframe
+        window.addEventListener('message', function(event) {
+            // Handle any messages from parent if needed
+        });
+    });
+</script>
+</body>
+</html>
