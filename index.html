@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-Frame-Options" content="allow-from https://kyosuke12378.web.app">
+    <!-- Removed the X-Frame-Options meta tag that blocked iframe loading -->
     <title>ကျွဲဂိမ်း - Official</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -240,25 +240,7 @@
             <h1>Privacy Policy</h1>
             <p>ကျွှဲဂိမ်း - Entertainment for Everyone</p>
             
-           <div class="contact-buttons">
-    <!-- Telegram -->
-    <a href="#" 
-       class="contact-btn telegram-btn" 
-       id="telegram-btn"
-       onclick="handleTelegramClick(event)">
-       <i class="fab fa-telegram"></i>
-       <span>Contact on Telegram</span>
-    </a>
-
-    <!-- Viber -->
-    <a href="#" 
-       class="contact-btn viber-btn" 
-       id="telegram-btn"
-       onclick="handleViberClick(event)">
-       <i class="fab fa-viber"></i>
-       <span>Contact on Viber</span>
-    </a>
-</div>
+           <!-- 4. Removed Telegram and Viber buttons from here -->
         </div>
         
         <div class="content">
@@ -316,7 +298,7 @@
                 <p>Whenever we make changes, the updated Privacy Policy will be posted on this page. We encourage users to review this page periodically.</p>
             </div>
             
-            <div class="section">
+            <div class.section">
                 <h2>7. Contact Us</h2>
                 <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our practices, please contact us:</p>
                 
@@ -337,77 +319,10 @@
         </div>
     </div>
 <script>
-    // Function to handle Telegram click
-    function handleTelegramClick(event) {
-        event.preventDefault();
-        
-        // Try to open Telegram app directly
-        const appUrl = 'tg://resolve?domain=BuffaloOff';
-        const webUrl = 'https://t.me/BuffaloOff';
-        
-        // Check if we're in an iframe
-        if (window.self !== window.top) {
-            // We're in an iframe, send message to parent
-            window.parent.postMessage({
-                type: "OPEN_EXTERNAL_LINK",
-                url: appUrl,
-                fallback: webUrl
-            }, "*");
-        } else {
-            // We're not in an iframe, handle directly
-            window.location.href = appUrl;
-            
-            // Fallback to web after a short delay if the app doesn't open
-            setTimeout(function() {
-                if (!document.hidden) {
-                    window.location.href = webUrl;
-                }
-            }, 500);
-        }
-    }
+    // 4. Removed all JavaScript functions (handleTelegramClick, handleViberClick) 
+    // and event listeners from here as they are no longer needed on this page.
     
-    // Function to handle Viber click
-    function handleViberClick(event) {
-        event.preventDefault();
-        
-        // Working Viber contact link
-        const appUrl = 'viber://chat?number=%2B95750898761';
-        const webUrl = 'https://viber.com';
-        
-        // Check if we're in an iframe
-        if (window.self !== window.top) {
-            // We're in an iframe, send message to parent
-            window.parent.postMessage({
-                type: "OPEN_EXTERNAL_LINK",
-                url: appUrl,
-                fallback: webUrl
-            }, "*");
-        } else {
-            // We're not in an iframe, handle directly
-            window.location.href = appUrl;
-            
-            // Fallback to web after a short delay if the app doesn't open
-            setTimeout(function() {
-                if (!document.hidden) {
-                    window.location.href = webUrl;
-                }
-            }, 500);
-        }
-    }
-    
-    // Set up event listeners when DOM is loaded
     document.addEventListener("DOMContentLoaded", function() {
-        const telegramBtn = document.getElementById("telegram-btn");
-        const viberBtn = document.getElementById("viber-btn");
-        
-        if (telegramBtn) {
-            telegramBtn.addEventListener("click", handleTelegramClick);
-        }
-        
-        if (viberBtn) {
-            viberBtn.addEventListener("click", handleViberClick);
-        }
-        
         // Listen for messages from parent if we're in an iframe
         window.addEventListener('message', function(event) {
             // Handle any messages from parent if needed
