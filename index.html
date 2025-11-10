@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Removed the X-Frame-Options meta tag that blocked iframe loading -->
     <title>ကျွဲဂိမ်း - Official</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -63,48 +62,6 @@
             margin: 0 auto;
         }
         
-        .contact-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin: 30px 0 15px;
-            flex-wrap: wrap;
-        }
-        
-        .contact-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            padding: 14px 32px;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 17px;
-            min-width: 200px;
-            justify-content: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        }
-        
-        .telegram-btn {
-            background: #0088cc;
-            color: white;
-        }
-        
-        .viber-btn {
-            background: #7b519d;
-            color: white;
-        }
-        
-        .contact-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-        }
-        
-        .contact-btn i {
-            font-size: 20px;
-        }
-        
         .content {
             padding: 50px;
         }
@@ -147,6 +104,28 @@
             margin: 25px 0;
         }
         
+        .warning-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-left: 4px solid #f39c12;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        
+        .warning-box h3 {
+            color: #856404;
+            margin-bottom: 10px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .warning-box h3 i {
+            color: #f39c12;
+        }
+        
         .contact-info {
             display: flex;
             flex-wrap: wrap;
@@ -162,6 +141,7 @@
             border-radius: 8px;
             border: 1px solid #e2e8f0;
             transition: all 0.3s;
+            text-align: center;
         }
         
         .contact-item:hover {
@@ -181,6 +161,11 @@
             color: #1e293b;
         }
         
+        .contact-item p {
+            color: #64748b;
+            font-size: 16px;
+        }
+        
         .update {
             text-align: center;
             padding: 25px;
@@ -193,17 +178,6 @@
         @media (max-width: 768px) {
             .content {
                 padding: 35px 25px;
-            }
-            
-            .contact-buttons {
-                flex-direction: column;
-                align-items: center;
-                gap: 18px;
-            }
-            
-            .contact-btn {
-                width: 100%;
-                max-width: 300px;
             }
             
             .header {
@@ -231,6 +205,14 @@
             .header p {
                 font-size: 16px;
             }
+            
+            .contact-info {
+                flex-direction: column;
+            }
+            
+            .contact-item {
+                min-width: 100%;
+            }
         }
     </style>
 </head>
@@ -239,15 +221,18 @@
         <div class="header">
             <h1>Privacy Policy</h1>
             <p>ကျွှဲဂိမ်း - Entertainment for Everyone</p>
-            
-           <!-- 4. Removed Telegram and Viber buttons from here -->
         </div>
         
         <div class="content">
-            <!-- Rest of your privacy policy content remains the same -->
             <div class="section">
                 <h2>Privacy Policy</h2>
                 <p>ကျွှဲဂိမ်း is provided as a free app intended for entertainment purposes. This Privacy Policy is meant to inform users about our policies regarding the collection, use, and disclosure of personal information for anyone choosing to use our app.</p>
+                
+                <div class="warning-box">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Important Notice</h3>
+                    <p><strong>This is a simulation game only - No real money is used or can be won.</strong> All gameplay is for entertainment purposes and uses virtual points with no monetary value. This app does not involve real money gambling or any financial transactions.</p>
+                </div>
+                
                 <p class="highlight">By installing and using ကျွှဲဂိမ်း, you agree to the terms described in this policy.</p>
             </div>
             
@@ -258,6 +243,7 @@
                 <p>• We do not require you to create an account or sign in.</p>
                 <p>• We do not collect or store any sensitive information from your device.</p>
                 <p>• The app's functionality is limited to providing an offline, casual gaming experience.</p>
+                <p>• <strong>No real money is involved in any aspect of this game.</strong></p>
             </div>
             
             <div class="section">
@@ -298,7 +284,7 @@
                 <p>Whenever we make changes, the updated Privacy Policy will be posted on this page. We encourage users to review this page periodically.</p>
             </div>
             
-            <div class.section">
+            <div class="section">
                 <h2>7. Contact Us</h2>
                 <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our practices, please contact us:</p>
                 
@@ -306,7 +292,12 @@
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <h3>Email</h3>
-                        <p>[018ky0suke@gmail.com]</p>
+                        <p>018ky0suke@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-info-circle"></i>
+                        <h3>Support</h3>
+                        <p>App Support & Inquiries</p>
                     </div>
                 </div>
                 
@@ -318,10 +309,8 @@
             </div>
         </div>
     </div>
+
 <script>
-    // 4. Removed all JavaScript functions (handleTelegramClick, handleViberClick) 
-    // and event listeners from here as they are no longer needed on this page.
-    
     document.addEventListener("DOMContentLoaded", function() {
         // Listen for messages from parent if we're in an iframe
         window.addEventListener('message', function(event) {
