@@ -2,191 +2,478 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Privacy Policy - သေနတ်မမ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Contact</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        *{-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none;margin:0;padding:0;box-sizing:border-box}
-        body{background:#0d0500;background-image:radial-gradient(ellipse at center,#2c1810 0%,#0d0500 100%);min-height:100vh;font-family:'Georgia','Times New Roman',serif;color:#c8a070;padding:10px}
-        .container{max-width:600px;margin:0 auto;background:linear-gradient(180deg,#1a0c04,#0a0400);border:3px solid #3a2010;border-radius:4px;box-shadow:0 0 0 4px #1a0c04,0 0 0 8px #3a2010,0 0 0 12px #0a0400,0 15px 50px rgba(0,0,0,.8);overflow:hidden}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
         
-        .wanted-header{background:linear-gradient(180deg,#7a5a20,#5a3d10);padding:20px;text-align:center;position:relative;border-bottom:3px solid #c8a030}
-        .wanted-header::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(200,160,48,0.1)" stroke-width="1"/></svg>') repeat;opacity:.3}
-        .wanted-header h1{font-size:2rem;color:#ffd700;text-shadow:2px 2px 0 #5a3000,0 0 15px rgba(255,215,0,.3);letter-spacing:4px;margin-bottom:5px;position:relative;z-index:1}
-        .wanted-header .subtitle{color:#c8a070;font-size:.75rem;font-style:italic;letter-spacing:2px;position:relative;z-index:1}
-        .wanted-badge{width:50px;height:50px;margin:0 auto 10px;position:relative;z-index:1}
-        .wanted-badge::before{content:'★';font-size:3rem;color:#ffd700;filter:drop-shadow(0 0 10px rgba(255,215,0,.5))}
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
         
-        .customer-service{background:linear-gradient(180deg,#2a1508,#1a0c04);padding:15px;border-bottom:2px solid #3a2010}
-        .cs-label{color:#ffd700;font-size:.7rem;text-align:center;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px;font-weight:bold}
-        .cs-buttons{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-        .cs-btn{padding:10px 20px;border:2px solid #c8a030;border-radius:4px;font-weight:bold;cursor:pointer;font-family:'Georgia',serif;font-size:.85rem;display:flex;align-items:center;gap:8px;transition:.15s;text-transform:uppercase;letter-spacing:1px;min-width:140px;justify-content:center}
-        .cs-btn i{font-size:1.1rem}
-        .cs-btn.telegram{background:linear-gradient(180deg,#0088cc,#006699);color:#fff;border-color:#00aaff}
-        .cs-btn.telegram:hover{background:linear-gradient(180deg,#0099dd,#0077aa);transform:translateY(-2px);box-shadow:0 4px 15px rgba(0,136,204,.4)}
-        .cs-btn.viber{background:linear-gradient(180deg,#7b519d,#6a4288);color:#fff;border-color:#9b61bd}
-        .cs-btn.viber:hover{background:linear-gradient(180deg,#8b61ad,#7a5298);transform:translateY(-2px);box-shadow:0 4px 15px rgba(123,81,157,.4)}
-        .cs-btn:active{transform:translateY(1px)}
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
         
-        .content{padding:20px}
-        .section{margin-bottom:25px}
-        .section-title{color:#ffd700;font-size:1rem;font-weight:bold;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid #3a2010;display:flex;align-items:center;gap:8px;letter-spacing:1px}
-        .section-title::before{content:'◆';color:#c8a030;font-size:.7rem}
-        .section p{color:#a08060;font-size:.82rem;line-height:1.7;margin-bottom:10px}
-        .section ul{list-style:none;padding-left:0}
-        .section ul li{color:#a08060;font-size:.82rem;line-height:1.7;padding-left:20px;position:relative;margin-bottom:8px}
-        .section ul li::before{content:'▸';position:absolute;left:0;color:#c8a030}
-        .highlight-box{background:rgba(200,160,48,.08);border-left:3px solid #c8a030;padding:12px;border-radius:0 4px 4px 0;margin:15px 0}
-        .highlight-box p{margin-bottom:0}
+        .header {
+            background: #2563eb;
+            padding: 30px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
         
-        .footer{text-align:center;padding:15px;border-top:2px solid #3a2010;color:#5a3d10;font-size:.7rem;font-style:italic}
-        .footer .last-update{color:#7a5a30}
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"><path fill="white" fill-opacity="1" d="M0,70L1440,10L1440,100L0,100Z"></path></svg>');
+            background-size: cover;
+        }
         
-        @media(max-width:480px){
-            body{padding:5px}
-            .wanted-header h1{font-size:1.5rem;letter-spacing:2px}
-            .cs-buttons{flex-direction:column;align-items:center}
-            .cs-btn{width:100%;max-width:250px}
-            .content{padding:15px}
-            .section p,.section ul li{font-size:.78rem}
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .header p {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 20px auto;
+        }
+        
+        /* Contact Buttons at the Top */
+        .top-contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-btn-top {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-width: 180px;
+            justify-content: center;
+        }
+        
+        
+        .contact-btn-top i {
+            font-size: 20px;
+        }
+        
+        .content {
+            padding: 40px 50px 50px 50px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section h2 {
+            color: #2563eb;
+            margin-bottom: 18px;
+            font-size: 24px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eef2f7;
+            position: relative;
+        }
+        
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: #2563eb;
+        }
+        
+        .section p {
+            margin-bottom: 20px;
+            font-size: 17px;
+            color: #4b5563;
+            line-height: 1.7;
+        }
+        
+        .highlight {
+            background: #eff6ff;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #2563eb;
+            margin: 25px 0;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .contact-item {
+            flex: 1;
+            min-width: 200px;
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-item i {
+            font-size: 28px;
+            color: #2563eb;
+            margin-bottom: 15px;
+        }
+        
+        .contact-item h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #1e293b;
+        }
+        
+        .contact-item p {
+            color: #64748b;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        
+        .contact-btn {
+            padding: 10px 20px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 15px;
+            width: 100%;
+            max-width: 180px;
+            margin-top: 10px;
+        }
+        
+        .contact-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+        
+        .telegram-btn {
+            background: #0088cc;
+        }
+        
+        .telegram-btn:hover {
+            background: #0077b3;
+        }
+        
+        .viber-btn {
+            background: #7b519d;
+        }
+        
+        .viber-btn:hover {
+            background: #6a4288;
+        }
+        
+        .update {
+            text-align: center;
+            padding: 25px;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                padding: 35px 25px;
+            }
+            
+            .header {
+                padding: 25px 20px;
+            }
+            
+            .header h1 {
+                font-size: 28px;
+            }
+            
+            .top-contact-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            .contact-btn-top {
+                width: 100%;
+                max-width: 250px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+            }
+            
+            .contact-item {
+                min-width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .section h2 {
+                font-size: 22px;
+            }
+            
+            .header h1 {
+                font-size: 24px;
+            }
+            
+            .header p {
+                font-size: 16px;
+            }
+            
+            .contact-btn-top {
+                padding: 10px 20px;
+                font-size: 15px;
+                min-width: 150px;
+            }
+            
+            .top-contact-buttons {
+                gap: 8px;
+            }
+        }
+        
+        @media (max-width: 350px) {
+            .top-contact-buttons {
+                flex-direction: column;
+            }
+            
+            .contact-btn-top {
+                width: 90%;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="wanted-header">
-            <div class="wanted-badge"></div>
-            <h1>PRIVACY POLICY</h1>
-            <div class="subtitle">သေနတ်မမ - Western Shooter Game</div>
-        </div>
-        
-        <div class="customer-service">
-            <div class="cs-label">⟐ Customer Service ⟐</div>
-            <div class="cs-buttons">
-                <button class="cs-btn telegram" data-url="tg://resolve?domain=BuffaloOff" data-fallback="https://t.me/BuffaloOff">
-                    <i class="fab fa-telegram"></i>
-                    Telegram
-                </button>
-                <button class="cs-btn viber" data-url="viber://chat?number=%2B95750898761" data-fallback="https://viber.com">
-                    <i class="fab fa-viber"></i>
-                    Viber
-                </button>
-            </div>
+        <div class="header">
+            <h1>Privacy Policy</h1>
+            <p>ကျွဲဂိမ်း - Entertainment App</p>
+            
         </div>
         
         <div class="content">
             <div class="section">
-                <div class="section-title">Introduction</div>
-                <p>Howdy, partner! သေနတ်မမ is a free western shooting game designed for pure entertainment. This policy explains how we handle your information - which is simple: we don't collect any.</p>
-                <div class="highlight-box">
-                    <p>By playing သေနတ်မမ, you agree to this straightforward privacy approach.</p>
+                <h2>Privacy Policy</h2>
+                <p>ကျွဲဂိမ်း is provided as a free app intended for entertainment purposes. This Privacy Policy is meant to inform users about our policies regarding the collection, use, and disclosure of personal information for anyone choosing to use our app.</p>
+                
+                <div class="highlight">
+                    <p>By installing and using ကျွဲဂိမ်း, you agree to the terms described in this policy.</p>
                 </div>
             </div>
             
             <div class="section">
-                <div class="section-title">What We Don't Collect</div>
-                <p>This here game keeps to itself. We don't gather:</p>
-                <ul>
-                    <li>Your name, email, phone number, or any personal details</li>
-                    <li>Account information or login credentials</li>
-                    <li>Device identifiers or advertising IDs</li>
-                    <li>Location data or IP addresses</li>
-                    <li>Usage statistics or behavioral patterns</li>
-                    <li>Any form of analytics or tracking data</li>
-                </ul>
+                <h2>1. Information Collection and Use</h2>
+                <p>We value your privacy. ကျွဲဂိမ်း is designed to be used without requiring you to provide personal data. Specifically:</p>
+                <p>• We do not ask for your name, email address, phone number, or any other personally identifiable information.</p>
+                <p>• We do not require you to create an account or sign in.</p>
+                <p>• We do not collect or store any sensitive information from your device.</p>
+                <p>• The app's functionality is limited to providing an offline, casual gaming experience.</p>
             </div>
             
             <div class="section">
-                <div class="section-title">Offline Operation</div>
-                <p>သေနတ်မမ works completely offline. All game data, scores, and settings are stored locally on your device. Nothing is transmitted to external servers.</p>
+                <h2>2. Automatically Collected Information</h2>
+                <p>ကျွဲဂိမ်း does not use built-in analytics tools or third-party services to collect data such as:</p>
+                <p>• Device identifiers (e.g., Advertising ID)</p>
+                <p>• IP addresses</p>
+                <p>• Usage data or diagnostics</p>
+                <p>As a result, we do not track user behavior within the app.</p>
             </div>
             
             <div class="section">
-                <div class="section-title">External Links</div>
-                <p>The app includes contact buttons that link to Telegram and Viber. These third-party services have their own privacy policies which we recommend reviewing. We don't control their data practices.</p>
+                <h2>3. External Links</h2>
+                <p>The app may include buttons or links that lead to external resources, including:</p>
+                <p>• A website where you can read this Privacy Policy</p>
+                <p>• Social media or messaging platforms</p>
+                <p>Please be aware that we do not operate or control these external websites or services. We strongly encourage you to review the privacy policies of any external site you visit. We assume no responsibility for the content, policies, or practices of third-party sites or services.</p>
             </div>
             
             <div class="section">
-                <div class="section-title">No Advertising</div>
-                <p>Currently, သေနတ်မမ contains no third-party advertisements. If this changes in future updates, this policy will be updated accordingly.</p>
+                <h2>4. Advertising and Analytics</h2>
+                <p>At this time, ကျွဲဂိမ်း does not display third-party advertisements or use analytics services. Should this change in future versions of the app, we will update this Privacy Policy to clearly explain what data is collected, how it's used, and what choices users have.</p>
             </div>
             
             <div class="section">
-                <div class="section-title">Your Rights</div>
-                <p>Since we collect nothing, there's no data to access, modify, or delete. Your privacy remains intact by design.</p>
+                <h2>5. Data Security</h2>
+                <p>Even though we do not collect personal information, we take the security of our users seriously. We recommend users:</p>
+                <p>• Only download the app from trusted sources (such as Google Play)</p>
+                <p>• Avoid sharing device data with unknown parties</p>
             </div>
             
             <div class="section">
-                <div class="section-title">Policy Updates</div>
-                <p>We may revise this policy if the app's features change. Any updates will be reflected here with a new date.</p>
+                <h2>6. Changes to This Privacy Policy</h2>
+                <p>We may update this Privacy Policy from time to time to reflect:</p>
+                <p>• Changes in our practices</p>
+                <p>• Compliance with new laws or regulations</p>
+                <p>• Addition of new features or services</p>
+                <p>Whenever we make changes, the updated Privacy Policy will be posted on this page. We encourage users to review this page periodically.</p>
             </div>
             
             <div class="section">
-                <div class="section-title">Contact</div>
-                <p>For questions or concerns, reach out through the Customer Service buttons above.</p>
+                <h2>7. Contact Us</h2>
+                <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our practices, please contact us:</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fab fa-telegram"></i>
+                        <h3>Telegram</h3>
+                        <p>@BuffaloOff</p>
+                        <button class="contact-btn telegram-btn" data-url="tg://resolve?domain=BuffaloOff" data-fallback="https://t.me/BuffaloOff">
+                            Open in Telegram
+                        </button>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-viber"></i>
+                        <h3>Viber</h3>
+                        <p>+95 750 898 761</p>
+                        <button class="contact-btn viber-btn" data-url="viber://chat?number=%2B95750898761" data-fallback="https://viber.com">
+                            Open in Viber
+                        </button>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>018ky0suke@gmail.com</p>
+                        <button class="contact-btn" onclick="window.location.href='mailto:018ky0suke@gmail.com'">
+                            Send Email
+                        </button>
+                    </div>
+                </div>
+                
+                <p style="margin-top: 20px;">We are committed to responding to user inquiries as quickly as possible.</p>
             </div>
-        </div>
-        
-        <div class="footer">
-            <p class="last-update">Last updated: August 2024</p>
-            <p>NotFoundException Development</p>
+            
+            <div class="update">
+                <p>Last updated: August 14, 2024</p>
+            </div>
         </div>
     </div>
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        function openExternalUrl(url, fallbackUrl) {
+        // Function to open external URLs
+        function openExternalUrl(url, fallbackUrl = null) {
             try {
+                // Check if we're in a Cordova app
                 if (window.cordova && window.cordova.InAppBrowser) {
                     window.cordova.InAppBrowser.open(url, '_system');
-                    return;
+                    return true;
                 }
                 
+                // Check if we're in a Capacitor app
                 if (window.Capacitor && window.Capacitor.Plugins.Browser) {
                     window.Capacitor.Plugins.Browser.open({ url: url });
-                    return;
+                    return true;
                 }
                 
+                // For protocol links (tg://, viber://)
                 if (url.startsWith('tg://') || url.startsWith('viber://')) {
+                    // Create a hidden iframe to launch the protocol
                     const iframe = document.createElement('iframe');
                     iframe.style.display = 'none';
                     iframe.src = url;
                     document.body.appendChild(iframe);
                     
+                    // Clean up after 1 second
                     setTimeout(() => {
-                        if (document.body.contains(iframe)) {
-                            document.body.removeChild(iframe);
-                        }
+                        document.body.removeChild(iframe);
                     }, 1000);
                     
+                    // Show fallback if app doesn't open
                     if (fallbackUrl) {
                         setTimeout(() => {
                             window.open(fallbackUrl, '_blank');
-                        }, 800);
+                        }, 500);
                     }
-                    return;
+                    return true;
                 }
                 
+                // For regular URLs
                 window.open(url, '_blank');
+                return true;
                 
             } catch (e) {
                 console.error('Failed to open URL:', e);
                 if (fallbackUrl) {
                     window.open(fallbackUrl, '_blank');
                 }
+                return false;
             }
         }
         
-        document.querySelectorAll('.cs-btn').forEach(btn => {
+        // Add click handlers to all contact buttons (both top and section)
+        const contactBtns = document.querySelectorAll('.contact-btn-top, .contact-btn');
+        contactBtns.forEach(btn => {
             btn.addEventListener('click', function() {
                 const url = this.getAttribute('data-url');
                 const fallback = this.getAttribute('data-fallback');
+                
                 if (url) {
                     openExternalUrl(url, fallback);
                 }
             });
         });
         
+        // Handle messages from parent if we're in an iframe
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.type === "OPEN_EXTERNAL_LINK") {
+                const url = event.data.url;
+                const fallback = event.data.fallback;
+                openExternalUrl(url, fallback);
+            }
+        });
+        
+        // Send message to parent that we're loaded
         if (window.parent !== window) {
             window.parent.postMessage({ type: "POLICY_LOADED" }, "*");
         }
